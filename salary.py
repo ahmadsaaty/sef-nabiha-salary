@@ -1,1 +1,5 @@
 salary = input("Please enter your salary: ")
+month = input("Please enter the month: ")
+savings = input("Please enter the savings percentage : ")
+rent = input("Please enter the rent percentage: ")
+electricity = input("Please enter the electricity: ")
