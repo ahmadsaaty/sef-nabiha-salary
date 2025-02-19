@@ -27,9 +27,9 @@ yearlyrent= rentamount * 12
 print("Nabiha, your yearly rent value is: " + str(yearlyrent) + "$$$")
 
 yearlyelectricity = electricityamount * 12
-print("Nabiha, your yearly electricity value is: " + str(yearlyelectricity+yearlyrent   ) + "$$$")
+print("Nabiha, your yearly electricity value is: " + str(yearlyelectricity) + "$$$")
 
-print("Nabiha, your yearly rent and electricity expenses are: " + str(yearlyelectricity) + "$$$")
+print("Nabiha, your yearly rent and electricity expenses are: " + str(yearlyelectricity+yearlyrent) + "$$$")
 
 # Nabiha's total salary for the month raised to the power of 2 (just for fun).
 squaredsalary = salary**2
