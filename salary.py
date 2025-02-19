@@ -1,46 +1,56 @@
+#define needed input values
 salary = int(input("Nabiha, Please enter your salary: "))
 month = input("Nabiha, Please enter the name of the month of your salary: ")
-savings = int(input("Nabiha, Please enter the savings percentage : "))
-rent = int(input("Nabiha, Please enter the rent percentage: "))
-electricity = int(input("Nabiha, Please enter the electricity percentage: "))
+monthlist = ["january","february","march","april","may","june","july","august","september","october","november","december"]
 
-#The amount allocated to savings, rent, and electricity.
-savingsamount = salary * savings // 100
-print("Nabiha, your savings value is: " + str(savingsamount) + "$$$") 
+#check if the month is entered correctly
+if month.lower() in monthlist :
+    print(month.capitalize() + " is the best month in the year")
+    savings = int(input("Nabiha, Please enter the savings percentage : "))
+    rent = int(input("Nabiha, Please enter the rent percentage: "))
+    electricity = int(input("Nabiha, Please enter the electricity percentage: "))
 
-rentamount = salary * rent // 100
-print("Nabiha, your rent value is: " + str(rentamount) + "$$$")
+    #The amount allocated to savings, rent, and electricity.
+    savingsamount = salary * savings // 100
+    print("Nabiha, your savings value is: " + str(savingsamount) + "$$$") 
 
-electricityamount = salary * electricity // 100
-print("Nabiha, your electricity value is: " + str(electricityamount) + "$$$")
+    rentamount = salary * rent // 100
+    print("Nabiha, your rent value is: " + str(rentamount) + "$$$")
 
-#The total amount Nabiha spends on savings, rent, and electricity combined.
-totalsum = savingsamount + rentamount + electricityamount
-print("Nabiha, your total sum of expenses is: " + str(totalsum) + "$$$")
+    electricityamount = salary * electricity // 100
+    print("Nabiha, your electricity value is: " + str(electricityamount) + "$$$")
 
-# The remainder of Nabiha’s salary after these expenses.
-remaining= salary - totalsum
-print("Nabiha, the remainder of your salary after these expenses is: " + str(remaining) + "$$$")
+    #The total amount Nabiha spends on savings, rent, and electricity combined.
+    totalsum = savingsamount + rentamount + electricityamount
+    print("Nabiha, your total sum of expenses is: " + str(totalsum) + "$$$")
 
-# The monthly rent and electricity multiplied by 12 to estimate Nabiha's yearly rent and electricity costs.
-yearlyrent= rentamount * 12
-print("Nabiha, your yearly rent value is: " + str(yearlyrent) + "$$$")
+    # The remainder of Nabiha’s salary after these expenses.
+    remaining= salary - totalsum
+    print("Nabiha, the remainder of your salary after these expenses is: " + str(remaining) + "$$$")
 
-yearlyelectricity = electricityamount * 12
-print("Nabiha, your yearly electricity value is: " + str(yearlyelectricity) + "$$$")
+    # The monthly rent and electricity multiplied by 12 to estimate Nabiha's yearly rent and electricity costs.
+    yearlyrent= rentamount * 12
+    print("Nabiha, your yearly rent value is: " + str(yearlyrent) + "$$$")
 
-print("Nabiha, your yearly rent and electricity expenses are: " + str(yearlyelectricity+yearlyrent) + "$$$")
+    yearlyelectricity = electricityamount * 12
+    print("Nabiha, your yearly electricity value is: " + str(yearlyelectricity) + "$$$")
 
-# Nabiha's total salary for the month raised to the power of 2 (just for fun).
-squaredsalary = salary**2
-print("Nabiha, your squared salary fun value is: " + str(squaredsalary) + "$$$")
+    print("Nabiha, your yearly rent and electricity expenses are: " + str(yearlyelectricity+yearlyrent) + "$$$")
 
-# Assume Nabiha saves an additional random amount (e.g., $50) each month, 
-# and you need to calculate how much would be left if this amount is divided by the total amount 
-# allocated to savings. 
-extrasaving = int(input("Nabiha, please enter your extra saving: "))
-amountleft = extrasaving / savingsamount
-print("Nabiha, your extra savings ratio is: " + str(amountleft))
+    # Nabiha's total salary for the month raised to the power of 2 (just for fun).
+    squaredsalary = salary**2
+    print("Nabiha, your squared salary fun value is: " + str(squaredsalary) + "$$$")
 
-#print a fun message to Nabiha
-print("Nabiha, you're gonna be rich")
+    # Assume Nabiha saves an additional random amount (e.g., $50) each month, 
+    # and you need to calculate how much would be left if this amount is divided by the total amount 
+    # allocated to savings. 
+    extrasaving = int(input("Nabiha, please enter your extra saving: "))
+    amountleft = extrasaving / savingsamount
+    print("Nabiha, your extra savings ratio is: " + str(amountleft))
+
+    #print a fun message to Nabiha
+    print("Nabiha, you're gonna be rich")
+     
+else:
+     print (month + " is not a month")
+     print ("YOU ARE NOT NABIHA")
